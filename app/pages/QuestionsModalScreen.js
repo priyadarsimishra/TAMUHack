@@ -85,7 +85,7 @@ const QuestionsModalScreen = ({ isVisible, prev, name }) => {
   }, [modalVisible])
 
   return (
-    <SafeAreaView>
+    <SafeAreaView >
       <Modal
         animationType="slide"
         visible={modalVisible}

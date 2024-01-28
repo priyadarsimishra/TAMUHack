@@ -32,7 +32,7 @@ const TopicModalScreen = ({ isVisible, name }) => {
         animationType="slide"
         visible={modalVisible}
       >
-        <SafeAreaView>
+        <SafeAreaView style={{ height: "100%", backgroundColor: "#33FF33" }}>
           <Pressable 
             style={{ 
               alignItems:'center',
@@ -42,19 +42,26 @@ const TopicModalScreen = ({ isVisible, name }) => {
               borderRadius:50,
               marginLeft: 15, 
               marginBottom: 5,
-              backgroundColor: "blue", 
+              backgroundColor: "darkgreen", 
               padding: 5,
             }}
             onPress={() => setModalVisible(false)} 
           >
             <MaterialCommunityIcons name="close" size={20} color={"white"} />
           </Pressable>
-          <Text>{name}</Text>
-          {subtopics?.map((subtopic, key) => {
-            return (
-                <QuestionsModalScreen isVisible={false} key={key} prev={name} name={subtopic} />
-            )
-          })}
+          <View 
+            style={{ 
+              marginLeft:"auto",
+              marginRight: "auto",
+            }}
+          >
+            <Text style={{ color: "darkgreen", fontWeight: "700", fontSize: 24, textAlign:"center" }}>{name}</Text>
+            {subtopics?.map((subtopic, key) => {
+                return (
+                    <QuestionsModalScreen isVisible={false} key={key} prev={name} name={subtopic} />
+                )
+            })}
+          </View>
         </SafeAreaView>
       </Modal>
       <Pressable 

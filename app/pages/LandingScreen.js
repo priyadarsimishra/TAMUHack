@@ -7,7 +7,7 @@ const LandingScreen = ({ navigation }) => {
     <SafeAreaView style={{ height: "100vh", backgroundColor: "white" }}>
       <View
         style={{
-          marginTop: "50%"
+          marginTop: "40%"
         }}
       >
         <Image 
